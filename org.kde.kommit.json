@@ -56,6 +56,9 @@
                     "type": "patch",
                     "path": "appdata.patch"
                 }
+            ],
+            "post-install": [
+                "appstream-util modify ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.appdata.xml project_license GPL-3.0-or-later"
             ]
         }
     ]
