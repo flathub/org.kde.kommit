@@ -46,6 +46,10 @@
         {
             "name": "kommit",
             "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DQT_MAJOR_VERSION=6"
+            ],
             "sources": [
                 {
                     "type": "archive",
