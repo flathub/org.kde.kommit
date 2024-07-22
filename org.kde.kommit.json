@@ -49,8 +49,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.kde.org/stable/kommit/kommit-1.0.2.tar.xz",
-                    "sha256": "1e8ecad23aa10508d0685a2e9169fc562e12fad5a6adaacd4542d9007a68e96e"
+                    "url": "https://download.kde.org/stable/kommit/kommit-1.6.0.tar.xz",
+                    "sha256": "ac30eb5f1a8c4035c6499d27325d499121ac2de7b3d381cacb0dd7427fb45025"
                 },
                 {
                     "type": "patch",
