@@ -18,27 +18,38 @@
     ],
     "modules": [
         {
-            "name": "git",
-            "make-args": [
-                "INSTALL_SYMLINKS=1"
-            ],
-            "make-install-args": [
-                "INSTALL_SYMLINKS=1"
-            ],
-            "cleanup": [
-                "/lib/pkgconfig",
-                "/man"
+            "name": "libssh2",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://www.libssh2.org/download/libssh2-1.11.0.tar.gz",
+                    "sha256": "3736161e41e2693324deb38c26cfdc3efe6209d634ba4258db1cecff6a5ad461",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 1730,
+                        "url-template": "https://www.libssh2.org/download/libssh2-$version.tar.gz"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "libgit2",
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DBUILD_SHARED_LIBS:BOOL=ON",
+                "-DBUILD_TESTS:BOOL=OFF",
+                "-DUSE_THREADS:BOOL=ON",
+                "-DUSE_SSH:BOOL=ON"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://www.kernel.org/pub/software/scm/git/git-2.45.2.tar.xz",
-                    "sha256": "51bfe87eb1c02fed1484051875365eeab229831d30d0cec5d89a14f9e40e9adb",
+                    "url": "https://github.com/libgit2/libgit2/archive/v1.8.1/libgit2-1.8.1.tar.gz",
+                    "sha256": "8c1eaf0cf07cba0e9021920bfba9502140220786ed5d8a8ec6c7ad9174522f8e",
                     "x-checker-data": {
                         "type": "anitya",
-                        "project-id": 5350,
-                        "stable-only": true,
-                        "url-template": "https://www.kernel.org/pub/software/scm/git/git-$version.tar.xz"
+                        "project-id": 1627,
+                        "url-template": "https://github.com/libgit2/libgit2/archive/v$version/libgit2-$version.tar.gz"
                     }
                 }
             ]
@@ -49,12 +60,12 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.kde.org/stable/kommit/kommit-1.0.2.tar.xz",
-                    "sha256": "1e8ecad23aa10508d0685a2e9169fc562e12fad5a6adaacd4542d9007a68e96e"
+                    "url": "https://download.kde.org/stable/kommit/kommit-1.6.0.tar.xz",
+                    "sha256": "ac30eb5f1a8c4035c6499d27325d499121ac2de7b3d381cacb0dd7427fb45025"
                 },
                 {
                     "type": "patch",
-                    "path": "appdata.patch"
+                    "path": "f4906ce11e89a65597b2228ab5efb96834c67c7c.patch"
                 }
             ],
             "post-install": [
