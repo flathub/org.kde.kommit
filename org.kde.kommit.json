@@ -62,6 +62,10 @@
                     "type": "archive",
                     "url": "https://download.kde.org/stable/kommit/kommit-1.6.0.tar.xz",
                     "sha256": "ac30eb5f1a8c4035c6499d27325d499121ac2de7b3d381cacb0dd7427fb45025"
+                },
+                {
+                    "type": "patch",
+                    "path": "f4906ce11e89a65597b2228ab5efb96834c67c7c.patch"
                 }
             ],
             "post-install": [

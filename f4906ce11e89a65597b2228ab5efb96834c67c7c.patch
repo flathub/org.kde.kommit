@@ -1,0 +1,26 @@
+From f4906ce11e89a65597b2228ab5efb96834c67c7c Mon Sep 17 00:00:00 2001
+From: Albert Astals Cid <aacid@kde.org>
+Date: Wed, 26 Jun 2024 13:44:13 +0200
+Subject: [PATCH] Fix appdata
+
+CCMAIL: jr@jriddell.org
+---
+ src/data/org.kde.kommit.appdata.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/data/org.kde.kommit.appdata.xml b/src/data/org.kde.kommit.appdata.xml
+index 0b7896d0..036762e2 100644
+--- a/src/data/org.kde.kommit.appdata.xml
++++ b/src/data/org.kde.kommit.appdata.xml
+@@ -95,7 +95,7 @@
+   </provides>
+   <project_group>KDE</project_group>
+   <releases>
+-    <release version="1.6.0" date="2024-06-25">
++    <release version="1.6.0" date="2024-06-25" />
+     <release version="1.0.2" date="2023-05-04">
+       <artifacts>
+         <artifact type="source">
+-- 
+GitLab
+
