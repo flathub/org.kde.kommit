@@ -1,7 +1,7 @@
 {
     "id": "org.kde.kommit",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-23.08",
+    "runtime-version": "6.8",
     "sdk": "org.kde.Sdk",
     "command": "kommit",
     "rename-icon": "kommit",
@@ -57,19 +57,20 @@
         {
             "name": "kommit",
             "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DQT_MAJOR_VERSION=6"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.kde.org/stable/kommit/kommit-1.6.0.tar.xz",
-                    "sha256": "ac30eb5f1a8c4035c6499d27325d499121ac2de7b3d381cacb0dd7427fb45025"
-                },
-                {
-                    "type": "patch",
-                    "path": "f4906ce11e89a65597b2228ab5efb96834c67c7c.patch"
+                    "url": "https://download.kde.org/stable/kommit/kommit-v1.7.1.tar.xz",
+                    "sha256": "ddde514faed998f780b169be110c2bf116e9c817ceb5ecc73487c6947405f991",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 371772,
+                        "url-template": "https://download.kde.org/stable/kommit/kommit-v$version.tar.xz"
+                    }
                 }
-            ],
-            "post-install": [
-                "appstream-util modify ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.appdata.xml project_license GPL-3.0-or-later"
             ]
         }
     ]
