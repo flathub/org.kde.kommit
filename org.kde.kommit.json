@@ -16,6 +16,16 @@
         "--socket=wayland",
         "--system-talk-name=org.freedesktop.UDisks2"
     ],
+    "cleanup": [
+        "/include",
+        "/lib/cmake",
+        "/lib/pkgconfig",
+        "/share/doc",
+        "/share/man",
+        "/share/qlogging-categories6",
+        "*.la",
+        "*.a"
+    ],
     "modules": [
         {
             "name": "libssh2",
